@@ -2464,6 +2464,22 @@ select.form-control:not([size]):not([multiple]) {
   /* 2 Columns */
   /* 3 Columns */
 }
+.gallery-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery-item {
+  text-align: center;
+  padding: 15px;
+  margin: 15px; /* Adjust margin for spacing between images */
+}
+.gallery-item .image-block {
+  display: inline-block;
+  padding: 6px;
+  border: 1px solid #e5e5e5;
+}
 .gallery-wrapper .gallery-item {
   padding: 15px;
 }
@@ -2474,9 +2490,12 @@ select.form-control:not([size]):not([multiple]) {
 .gallery-wrapper .gallery-item .image-block .image {
   position: relative;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 .gallery-wrapper .gallery-item .image-block .image img {
-  width: 100%;
+  max-width: 100%; /* Ensure images don't exceed their container */
+  max-height: 100%;
 }
 .gallery-wrapper .gallery-item .image-block .image .primary-overlay {
   position: absolute;
